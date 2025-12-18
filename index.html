@@ -3,60 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nextstep College Info | Expert Admission Consultancy</title>
+    <title>Nextstep College Info | Future Ready</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="container nav-container">
-            <div class="logo">
+            <a href="#" class="logo">
                 <img src="logo.png" alt="Nextstep Logo">
-                <span>NEXTSTEP COLLEGE INFO</span>
+                <span class="logo-text">NEXTSTEP<span class="highlight">INFO</span></span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#colleges" class="nav-link">Colleges</a></li>
+                    <li><a href="#contact" class="btn-nav">Free Counselling</a></li>
+                </ul>
             </div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#colleges">Top Colleges</a></li>
-                <li><a href="#contact" class="btn-nav">Free Counselling</a></li>
-            </ul>
-            <div class="hamburger">
-                <i class="fas fa-bars"></i>
+
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </div>
     </nav>
 
     <section id="home" class="hero">
-        <div class="hero-overlay"></div>
+        <div class="hero-bg-overlay"></div>
         <div class="container hero-content">
-            <h1>Your Future Starts Here</h1>
-            <p>Expert Admission Consultancy for Engineering, Medical, and Management Colleges. We guide you to the right campus.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">Book Consultation</a>
-                <a href="#colleges" class="btn btn-outline">Explore Colleges</a>
+            <div class="glass-card hero-card">
+                <h1>Unlock Your <br><span class="gradient-text">Dream Future</span></h1>
+                <p>Premium admission consultancy for Engineering, Medical, and Management. We simplify the path to your ideal campus.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                    <a href="#colleges" class="btn btn-outline">Explore Campuses</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="services" class="section">
         <div class="container">
-            <h2 class="section-title">Why Choose Nextstep?</h2>
+            <h2 class="section-title">Our Expertise</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <i class="fas fa-user-graduate"></i>
+                    <div class="icon-box"><i class="fas fa-user-graduate"></i></div>
                     <h3>Career Counseling</h3>
-                    <p>Confused about your career path? Our experts help you choose the right course based on your skills.</p>
+                    <p>Data-driven guidance to match your skills with the perfect career path.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-university"></i>
-                    <h3>Admission Guidance</h3>
-                    <p>Secured seats in top universities across India. We handle the paperwork and process for you.</p>
+                    <div class="icon-box"><i class="fas fa-university"></i></div>
+                    <h3>Admission Strategy</h3>
+                    <p>End-to-end support for securing seats in India's top-tier universities.</p>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-hand-holding-usd"></i>
-                    <h3>Scholarship Support</h3>
-                    <p>We help eligible students find and apply for scholarships to reduce financial burden.</p>
+                    <div class="icon-box"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3>Financial Aid</h3>
+                    <p>Expert assistance in navigating scholarships and educational loans.</p>
                 </div>
             </div>
         </div>
@@ -64,39 +73,44 @@
 
     <section id="colleges" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Top Colleges</h2>
+            <h2 class="section-title">Top Destinations</h2>
             <div class="college-grid">
                 <div class="college-card">
-                    <div class="card-header" style="background-color: #ffebee;">
-                        <i class="fas fa-laptop-code" style="color: #d32f2f;"></i>
+                    <div class="card-image engineering-bg">
+                        <div class="category-tag">Engineering</div>
                     </div>
                     <div class="card-body">
                         <h3>Anna University</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Chennai</p>
-                        <p class="course">Engineering & Technology</p>
-                        <button class="btn-sm">View Details</button>
+                        <p class="location"><i class="fas fa-map-pin"></i> Chennai, TN</p>
+                        <div class="divider"></div>
+                        <p class="details">B.E / B.Tech • Top Ranked</p>
+                        <button class="btn-sm">View Cutoffs</button>
                     </div>
                 </div>
+
                 <div class="college-card">
-                    <div class="card-header" style="background-color: #e3f2fd;">
-                        <i class="fas fa-stethoscope" style="color: #1976d2;"></i>
+                    <div class="card-image medical-bg">
+                        <div class="category-tag">Medical</div>
                     </div>
                     <div class="card-body">
                         <h3>Madras Medical College</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Chennai</p>
-                        <p class="course">MBBS / BDS</p>
-                        <button class="btn-sm">View Details</button>
+                        <p class="location"><i class="fas fa-map-pin"></i> Chennai, TN</p>
+                        <div class="divider"></div>
+                        <p class="details">MBBS / BDS • Government</p>
+                        <button class="btn-sm">View Cutoffs</button>
                     </div>
                 </div>
+
                 <div class="college-card">
-                    <div class="card-header" style="background-color: #fff3e0;">
-                        <i class="fas fa-briefcase" style="color: #f57c00;"></i>
+                    <div class="card-image management-bg">
+                        <div class="category-tag">Management</div>
                     </div>
                     <div class="card-body">
                         <h3>Christ University</h3>
-                        <p class="location"><i class="fas fa-map-marker-alt"></i> Bangalore</p>
-                        <p class="course">Management (MBA/BBA)</p>
-                        <button class="btn-sm">View Details</button>
+                        <p class="location"><i class="fas fa-map-pin"></i> Bangalore, KA</p>
+                        <div class="divider"></div>
+                        <p class="details">MBA / BBA • Placement High</p>
+                        <button class="btn-sm">View Cutoffs</button>
                     </div>
                 </div>
             </div>
@@ -105,42 +119,67 @@
 
     <section id="contact" class="section contact-section">
         <div class="container">
-            <h2 class="section-title text-white">Get Free Counselling</h2>
-            <form id="consultForm" class="contact-form">
-                <div class="form-group">
-                    <label>Student Name</label>
-                    <input type="text" id="name" required placeholder="Enter full name">
+            <div class="glass-form-wrapper">
+                <div class="form-header">
+                    <h2>Book Free Consultation</h2>
+                    <p>Fill the form below and our experts will contact you within 24 hours.</p>
                 </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="phone" required placeholder="Enter mobile number">
-                </div>
-                <div class="form-group">
-                    <label>Interested Course</label>
-                    <select id="course">
-                        <option value="Engineering">Engineering</option>
-                        <option value="Medical">Medical</option>
-                        <option value="Management">Management</option>
-                        <option value="Arts">Arts & Science</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Message</label>
-                    <textarea id="message" rows="4" placeholder="Any specific college requirements?"></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary btn-block">Submit Request</button>
-            </form>
+                
+                <form id="consultForm" class="contact-form">
+                    <input type="hidden" name="access_key" value="ea5a75dd-dc68-4381-a7c2-055c200600a5">
+                    
+                    <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label>Full Name</label>
+                            <input type="text" name="name" id="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number</label>
+                            <input type="tel" name="phone" id="phone" required placeholder="+91 98765 43210">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Course</label>
+                        <div class="select-wrapper">
+                            <select name="course" id="course">
+                                <option value="Engineering">Engineering (B.E/B.Tech)</option>
+                                <option value="Medical">Medical (MBBS/BDS)</option>
+                                <option value="Management">Management (MBA/BBA)</option>
+                                <option value="Arts">Arts & Science</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Query</label>
+                        <textarea name="message" id="message" rows="4" placeholder="Tell us about your marks or specific college preferences..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <span id="btnText">Send Inquiry</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <p id="formStatus" class="status-msg"></p>
+                </form>
+            </div>
         </div>
     </section>
 
     <footer>
-        <div class="container">
-            <p>&copy; 2024 Nextstep College Info. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Nextstep Info</h3>
+                <p>Guiding students toward a brighter tomorrow.</p>
             </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="copyright">&copy; 2025 Nextstep College Info. All rights reserved.</p>
         </div>
     </footer>
 
