@@ -294,6 +294,52 @@ footer {
     margin-top: 0;        /* Removes extra gaps between the form and icons */
     margin-bottom: 10px;  /* Tightens space before the copyright text */
 }
+/* --- Updated Navbar & Logo Styles --- */
+.navbar { 
+    background: var(--white); 
+    padding: 10px 0; /* Reduced padding slightly to accommodate larger logo */
+    box-shadow: var(--shadow); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo { 
+    display: flex; 
+    overflow: hidden;
+    align-items: center; 
+    font-weight: bold; 
+    font-size: 1.5rem; 
+    color: var(--primary); 
+}
+
+.logo img { 
+    height: 150px; /* Increased from 100px */
+    width: auto;   /* Maintains aspect ratio */
+    margin-right: 15px; 
+    transition: transform 0.3s ease; /* Optional: adds a nice hover effect */
+}
+
+.logo img:hover {
+    transform: scale(1.05); /* Slightly grows on hover */
+}
+/* --- Tightened Header --- */
+.navbar { 
+    background: var(--white); 
+    padding: 5px 0; /* Reduced from 15px to 5px */
+    box-shadow: var(--shadow); 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+.logo img { 
+    height: 100px; 
+    margin-right: 10px;
+    margin-top: -10px;    /* Pulls the image up to offset internal whitespace */
+    margin-bottom: -10px; /* Pulls the bottom up to offset internal whitespace */
+    display: block;       /* Removes any extra line-height spacing */
+}
 
 .copyright-text {
     margin-top: 5px;
