@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Eligibility & Cutoff | Nextstep College Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nextstep Logo">
+                <span class="logo-text">NEXTSTEP<span class="highlight"> INFO</span></span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li><a href="#" class="btn-nav open-modal-btn">Admission Enquiry</a></li>
+                </ul>
+            </div>
+
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Check Your Eligibility</h1>
+            <p>Calculate your engineering cutoff instantly or submit your marks for a free expert evaluation.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="eligibility-grid">
+                
+                <div class="calculator-card">
+                    <div class="calc-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>TNEA Cutoff Calculator</h3>
+                        <p>For Engineering Admissions (2026)</p>
+                    </div>
+
+                    <div class="calc-body">
+                        <div class="form-group">
+                            <label>Mathematics</label>
+                            <input type="number" id="maths" placeholder="Marks out of 100" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label>Physics</label>
+                            <input type="number" id="physics" placeholder="Marks out of 100" max="100">
+                        </div>
+                        <div class="form-group">
+                            <label>Chemistry</label>
+                            <input type="number" id="chemistry" placeholder="Marks out of 100" max="100">
+                        </div>
+
+                        <button onclick="calculateCutoff()" class="btn btn-primary btn-block">Calculate Now</button>
+                        
+                        <div id="resultBox" class="result-box hidden">
+                            <p>Your Engineering Cutoff</p>
+                            <h2 id="cutoffValue">0.00</h2>
+                            <span>/ 200</span>
+                        </div>
+                        <p id="calcError" class="error-text"></p>
+                    </div>
+                </div>
+
+                <div class="glass-form-wrapper eligibility-form-container">
+                    <div class="form-header">
+                        <h2>Submit Academic Details</h2>
+                        <p>Get a list of eligible colleges based on your marks.</p>
+                    </div>
+                    
+                    <form id="eligibilityForm" class="contact-form">
+                        <input type="hidden" name="access_key" value="ea5a75dd-dc68-4381-a7c2-055c200600a5">
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Student Name</label>
+                                <input type="text" name="name" required placeholder="Full Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="Mobile Number">
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" name="email" required placeholder="student@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" name="location" required placeholder="City / Town">
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>12th Cutoff / Total</label>
+                                <input type="text" name="marks" placeholder="e.g. 180/200 or 500/600">
+                            </div>
+                            <div class="form-group">
+                                <label>Board</label>
+                                <div class="select-wrapper">
+                                    <select name="board">
+                                        <option value="State Board">State Board</option>
+                                        <option value="CBSE">CBSE</option>
+                                        <option value="ICSE">ICSE</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred Course</label>
+                            <div class="select-wrapper">
+                                <select name="course" required>
+                                    <option value="" disabled selected>Select Course</option>
+                                    <option value="Engineering">Engineering (B.E/B.Tech)</option>
+                                    <option value="Medical">Medical (MBBS/BDS)</option>
+                                    <option value="Arts">Arts & Science</option>
+                                    <option value="Management">Management (MBA/MCA)</option>
+                                    <option value="Law">Law (LLB)</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                    <option value="Others">Others</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Preferred College / Location (Optional)</label>
+                            <textarea name="preferences" rows="2" placeholder="e.g. PSG, Anna University or Coimbatore Region"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-block">
+                            <span id="btnText">Check My Eligibility</span>
+                        </button>
+                        <p id="formStatus" class="status-msg"></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Nextstep College Info is your trusted educational consultancy. We bridge the gap between ambitious students and India's top-tier institutions for Engineering, Medical, and Arts.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/_vishnu_vk___?utm_source=qr&igsh=ZmNzcWl5ZnVmMHJv" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919884293320?text=Hi" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Our Courses</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Our Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Engineering</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Medical</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Architecture</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Pharmacy</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Nursing</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Arts & Science</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Management</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Agriculture</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Law</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Diploma</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Get In Touch</h3>
+                    <ul class="footer-contact" style="list-style: none;">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Coimbatore, Tamil Nadu,<br>India - 641001</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 98842 93320<br>+91 98842 93320</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@nextstep.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Nextstep College Info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="enquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <div class="form-header">
+                <h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 5px;">Quick Enquiry</h3>
+                <p style="text-align: center; font-size: 0.9rem; margin-bottom: 20px;">We'll call you back shortly!</p>
+            </div>
+            
+            <form id="modalForm">
+                <input type="hidden" name="access_key" value="ea5a75dd-dc68-4381-a7c2-055c200600a5">
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" required placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <div class="select-wrapper">
+                        <select name="course" required>
+                            <option value="" disabled selected>Select Course</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Medical">Medical</option>
+                            <option value="Arts">Arts</option>
+                            <option value="Management">Management</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="3" placeholder="Any specific requirements?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block">
+                    <span id="btnText">Submit Enquiry</span>
+                </button>
+                <p class="status-msg" style="text-align: center; margin-top: 10px; font-size: 0.9rem;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

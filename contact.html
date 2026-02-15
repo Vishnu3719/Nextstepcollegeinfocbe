@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nextstep College Info</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="Nextstep Logo">
+                <span class="logo-text">NEXTSTEP<span class="highlight"> INFO</span></span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="courses.html" class="nav-link">Courses</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact Us</a></li>
+                    <li><a href="#" class="btn-nav open-modal-btn">Admission Enquiry</a></li>
+                </ul>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Get In Touch</h1>
+            <p>We are here to help you secure your dream college. Reach out to us for free counseling.</p>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="contact-wrapper">
+                
+                <div class="contact-info-card">
+                    <h3 style="margin-bottom: 30px;">Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Call Us</h4>
+                            <p><a href="tel:+917397017897">+91 73970 17897</a></p>
+                            <p><a href="tel:+919884293320">+91 98842 93320</a></p>
+                            <p>Mon-Sun, 9am - 7pm</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email Us</h4>
+                            <p><a href="mailto:info@nextstep.com">nextstepcollegeinfocbe@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Visit Us</h4>
+                            <p>30/2 -B 2nd Floor, Agraharam West, Singanallur<br>Coimbatore - 641005, Tamil Nadu, India</p>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 30px; border-radius: 12px; overflow: hidden;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.4716834006593!2d77.0245054!3d11.0032049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba859dba206584f%3A0xc348501e183e2482!2sAgraharam%20St%2C%20Singanallur%2C%20Tamil%20Nadu%20641005!5e0!3m2!1sen!2sin!4v1707150000000!5m2!1sen!2sin" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+
+                <div class="glass-form-wrapper" style="background: white; border: 1px solid #e2e8f0; box-shadow: var(--shadow);">
+                    <div class="form-header">
+                        <h2 style="text-align: left;">Send us a message</h2>
+                        <p style="text-align: left; margin-bottom: 20px;">Fill the form below and our experts will contact you within 24 hours.</p>
+                    </div>
+                    
+                    <form id="consultForm" class="contact-form">
+                        <input type="hidden" name="access_key" value="ea5a75dd-dc68-4381-a7c2-055c200600a5">
+                        
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" name="name" required placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number</label>
+                                <input type="tel" name="phone" required placeholder="Mobile Number">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Preferred Course</label>
+                            <div class="select-wrapper">
+                                <select name="course">
+                                    <option value="Engineering">Engineering (B.E/B.Tech)</option>
+                                    <option value="Medical">MBBS / BDS</option>
+                                    <option value="Arts">Arts & Science</option>
+                                    <option value="Management">MBA & MCA</option>
+                                    <option value="Law">Law (LLB)</option>
+                                    <option value="Agriculture">Agriculture</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Your Query</label>
+                            <textarea name="message" rows="4" placeholder="Tell us about your marks or specific college preferences..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-block">
+                            <span id="btnText">Send Inquiry</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <p id="formStatus" class="status-msg"></p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-col">
+                    <h3>About Us</h3>
+                    <p>Nextstep College Info is your trusted educational consultancy. We bridge the gap between ambitious students and India's top-tier institutions for Engineering, Medical, and Arts.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/_vishnu_vk___?utm_source=qr&igsh=ZmNzcWl5ZnVmMHJv" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/919884293320?text=Hi" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> Home</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Our Courses</a></li>
+                        <li><a href="eligibility.html"><i class="fas fa-chevron-right"></i> Check Eligibility</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Our Courses</h3>
+                    <ul class="footer-links">
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Engineering</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Medical</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Architecture</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Pharmacy</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Nursing</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Arts & Science</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Management</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Agriculture</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Law</a></li>
+                        <li><a href="courses.html"><i class="fas fa-chevron-right"></i> Diploma</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Get In Touch</h3>
+                    <ul class="footer-contact" style="list-style: none;">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>30/2-B ,2nd Floor,Agraharam West,Singanallur, Coimbatore, Tamil Nadu,<br>India - 641005</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 73970 17897<br>+91 98842 93320</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>nextstepcollegeinfocbe@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>© 2025 Nextstep College Info. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="enquiryModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">×</span>
+            <div class="form-header">
+                <h3 style="text-align: center; color: var(--primary-dark); margin-bottom: 5px;">Quick Enquiry</h3>
+                <p style="text-align: center; font-size: 0.9rem; margin-bottom: 20px;">We'll call you back shortly!</p>
+            </div>
+            
+            <form id="modalForm">
+                <input type="hidden" name="access_key" value="ea5a75dd-dc68-4381-a7c2-055c200600a5">
+                <div class="form-group">
+                    <input type="text" name="name" required placeholder="Full Name">
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" required placeholder="Phone Number">
+                </div>
+                <div class="form-group">
+                    <div class="select-wrapper">
+                        <select name="course" required>
+                            <option value="" disabled selected>Select Course</option>
+                            <option value="Engineering">Engineering</option>
+                            <option value="Medical">MBBS</option>
+                            <option value="Arts & Science">Arts & Science</option>
+                            <option value="MBA & MCA">MBA & MCA</option>
+                            <option value="Architecture">Architecture</option>
+                            <option value="Pharmacy">Pharmacy</option>
+                            <option value="Nursing">Nursing</option>
+                            <option value="Diploma">Diploma</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <textarea name="message" rows="3" placeholder="Any specific requirements?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-block">
+                    <span id="btnText">Submit Enquiry</span>
+                </button>
+                <p class="status-msg" style="text-align: center; margin-top: 10px; font-size: 0.9rem;"></p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
